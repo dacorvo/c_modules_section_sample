@@ -3,5 +3,5 @@ struct module {
 	void (*bar)();
 };
 
-extern struct module *modules[];
-extern int modules_size;
+extern const struct module modules_start[];
+extern const struct module modules_end[];

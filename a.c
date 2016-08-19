@@ -12,7 +12,7 @@ static void bar_a()
 	printf("%s\n",__FUNCTION__);
 }
 
-struct module module_a = {
+struct module __attribute__ ((section (".modules"))) module_a = {
 	.foo = foo_a,
 	.bar = bar_a
 };

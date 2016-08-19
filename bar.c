@@ -2,8 +2,9 @@
 
 void bar()
 {
-	int i;
-	for (i = 0; i < modules_size; i++) {
-		modules[i]->bar();
+	const struct module *m = modules_start;
+	while (m < modules_end) {
+		m->bar();
+		m++;
 	}
 }
