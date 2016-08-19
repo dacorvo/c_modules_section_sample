@@ -12,7 +12,4 @@ static void bar_a()
 	printf("%s\n",__FUNCTION__);
 }
 
-struct module __attribute__ ((section (".modules"))) module_a = {
-	.foo = foo_a,
-	.bar = bar_a
-};
+DECLARE_MODULE(module_a, foo_a, bar_a)
