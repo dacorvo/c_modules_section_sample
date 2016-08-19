@@ -2,6 +2,8 @@
 
 void foo()
 {
-	module_a.foo();
-	module_b.foo();
+	int i;
+	for (i = 0; i < modules_size; i++) {
+		modules[i]->foo();
+	}
 }
